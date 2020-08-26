@@ -1,55 +1,177 @@
-<p><strong>Here are some very helpful scripts for Mu Online servers.</strong><br /><br /><strong>Apply or Insert it as a new Query Pointed to the Database "MuOnline"</strong><br /><br /><strong>Negative Money Fix :</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET Money='2000000000' WHERE Money&lt;-1</div>
-<p><br /><strong>Personal ID Code Check "Disabling" :</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE MEMB_INFO SET sno__numb=('') WHERE sno__numb&gt;1</div>
-<p><br /><strong>Starting Money (You starting money by changing ('10000000') to some other value.) :</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET Money=('10000000') WHERE Money&lt;1</div>
-<p><br /><strong>Auto Stats Fix :</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET Strength='32766' WHERE Strength&lt;1 UPDATE Character SET Dexterity='32766' WHERE Dexterity&lt;1 UPDATE Character SET Vitality='32766' WHERE Vitality&lt;1 UPDATE Character SET Energy='32766' WHERE Energy&lt;1</div>
-<p><br /><strong>If there is a Dark Lord Then it's will look so :</strong><br /><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET Strength='32766' WHERE Strength&lt;1 UPDATE Character SET Dexterity='32766' WHERE Dexterity&lt;1 UPDATE Character SET Vitality='32766' WHERE Vitality&lt;1 UPDATE Character SET Energy='32766' WHERE Energy&lt;1 UPDATE Character SET <span style="color: #ff0000;">Leadership</span>='32766' WHERE Leadership&lt;1</div>
-<p><span>---------------------------------</span><br /><br /><strong>Auto Clear PK</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET PkLevel = ('0'), PkTime = ('0'), PkCount = ('0') Where PkLevel&gt;2</div>
-<p><span>--------------------------------------</span><br /><br /><br /><strong>Starting stats editing:</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET Strength='how mutch starting strength you want' WHERE Strenght&lt;18 UPDATE Character SET Dexterity='how mutch starting dexterity you want' WHERE Dexterity&lt;16 UPDATE Character SET Vitality='how much-starting vitality you want' WHERE Vitality&lt;16 UPDATE Character SET Energy='how much-starting energy you want' WHERE Energy&lt;16</div>
-<p><br /><br /><br /><strong>For versions that have Dark Lord :</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET Strength='how mutch starting strength you want' WHERE Strenght&lt;18 UPDATE Character SET Dexterity='how mutch starting dexterity you want' WHERE Dexterity&lt;16 UPDATE Character SET Vitality='how much-starting vitality you want' WHERE Vitality&lt;16 UPDATE Character SET Energy='how much starting energy you want' WHERE Energy&lt;16 UPDATE Character SET Leadership='how much starting command you want' WHERE Leadership&lt;15</div>
-<p><br /><br /><strong>Incorrect connected users shown on the web fix. (First Take Server Offline !) (If your server is offline maybe there are connected users shown on the web, it will fix that).</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE MEMB_STAT SET Connect_Stat='0' WHERE Connect_Stat&gt;0</div>
-<p><br /><br /><strong>This script will automatically teleport users from "The Place Of Exile" To Lorencia, bar!</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET MapNumber=('0'), MapPosX=('125'), MapPosY=('125') WHERE MapNumber=('5')</div>
-<p><br /><strong>This one will fix the guild score -99 bug.</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Guild SET G_Score=('0') WHERE G_Score&lt;-1</div>
-<p><br /><br /><strong>This delete all there resets (DONT USE IT LIKE JOB).</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET Resets=('0') WHERE Resets&gt;0</div>
-<p><br /><br /><strong>This one will clear all the vaults.</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE warehouse SET Items=('')</div>
-<p><br /><br /><strong>This one for deleting all the items from inventories.</strong><br /><br /></p>
-<div>
-<div>Code:</div>
-UPDATE Character SET Inventory=('')</div>
-<p><br /><br /><strong>This one will unban all the players.</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET CtlCode=('0') WHERE CtlCode=('1')</div>
-<p><br /><br /><strong>This one will delete all GMs.</strong></p>
-<div>
-<div>Code:</div>
-UPDATE Character SET CtlCode=('0') WHERE CtlCode='32' OR CtlCode='8'</div>
-<p><br /><br /><strong>This one will delete all the level up points.</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET LevelUpPoints=('0') WHERE LevelUpPoints&gt;0</div>
-<p><br /><br /><br /><strong>Auto Reset</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET cLevel=('1') , experience=('0') WHERE cLevel&gt;349</div>
-<p><br /><br /><strong>This delete all there resets (DONT USE IT LIKE JOB).</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET Resets=('0') WHERE Resets&gt;0</div>
-<p><br /><strong>This one will delete all the level up points.</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET LevelUpPoints=('0') WHERE LevelUpPoints&gt;0</div>
-<p><br /><strong>Give a NO of starting Level up points to characters.</strong><br /><strong>Edit: 1500 with how much or less do you want.</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>UPDATE Character SET LevelUpPoint=('') + 1500 WHERE cLevel&lt;=1 and Resets&lt;=1</div>
-<p><span></span></p>
-<p><strong>This one will add free credits for ALL players</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>Update MEMB_CREDITS SET credits=credits+100</div>
-<p><br /><br /><strong>This one will drop MuOnline database (better don't use it ^^)</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>DROP dbo.MuOnline</div>
-<p><br /><br /><strong>This one will show you top 100 credited accounts</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>SELECT TOP 100 FROM MEMB_CREDITS WHERE credits&gt;0</div>
-<p><br /><br /><strong>This one will delete all level up points for characters who have max stats</strong><br /><span style="letter-spacing: -0.004em;">Code:</span></p>
-<div>update Character set leveluppoint='0' where Strength+Dexterity+Vitality+Energy='131068' OR Strength+Dexterity+Vitality+Energy+Leadership='163835'</div>
+Here are some very helpful scripts for Mu Online servers.
+
+Apply or Insert it as a new Query Pointed to the Database "MuOnline"
+
+Negative Money Fix :
+Code:
+
+UPDATE Character SET Money='2000000000' WHERE Money<-1
+
+
+Personal ID Code Check "Disabling" :
+Code:
+
+UPDATE MEMB_INFO SET sno__numb=('') WHERE sno__numb>1
+
+
+Starting Money (You starting money by changing ('10000000') to some other value.) :
+Code:
+
+UPDATE Character SET Money=('10000000') WHERE Money<1
+
+
+Auto Stats Fix :
+Code:
+
+UPDATE Character SET Strength='32766' WHERE Strength<1 UPDATE Character SET Dexterity='32766' WHERE Dexterity<1 UPDATE Character SET Vitality='32766' WHERE Vitality<1 UPDATE Character SET Energy='32766' WHERE Energy<1
+
+
+If there is a Dark Lord Then it's will look so :
+
+Code:
+
+UPDATE Character SET Strength='32766' WHERE Strength<1 UPDATE Character SET Dexterity='32766' WHERE Dexterity<1 UPDATE Character SET Vitality='32766' WHERE Vitality<1 UPDATE Character SET Energy='32766' WHERE Energy<1 UPDATE Character SET Leadership='32766' WHERE Leadership<1
+
+---------------------------------
+
+Auto Clear PK
+Code:
+
+UPDATE Character SET PkLevel = ('0'), PkTime = ('0'), PkCount = ('0') Where PkLevel>2
+
+--------------------------------------
+
+
+Starting stats editing:
+Code:
+
+UPDATE Character SET Strength='how mutch starting strength you want' WHERE Strenght<18 UPDATE Character SET Dexterity='how mutch starting dexterity you want' WHERE Dexterity<16 UPDATE Character SET Vitality='how much-starting vitality you want' WHERE Vitality<16 UPDATE Character SET Energy='how much-starting energy you want' WHERE Energy<16
+
+
+
+
+For versions that have Dark Lord :
+Code:
+
+UPDATE Character SET Strength='how mutch starting strength you want' WHERE Strenght<18 UPDATE Character SET Dexterity='how mutch starting dexterity you want' WHERE Dexterity<16 UPDATE Character SET Vitality='how much-starting vitality you want' WHERE Vitality<16 UPDATE Character SET Energy='how much starting energy you want' WHERE Energy<16 UPDATE Character SET Leadership='how much starting command you want' WHERE Leadership<15
+
+
+
+Incorrect connected users shown on the web fix. (First Take Server Offline !) (If your server is offline maybe there are connected users shown on the web, it will fix that).
+Code:
+
+UPDATE MEMB_STAT SET Connect_Stat='0' WHERE Connect_Stat>0
+
+
+
+This script will automatically teleport users from "The Place Of Exile" To Lorencia, bar!
+Code:
+
+UPDATE Character SET MapNumber=('0'), MapPosX=('125'), MapPosY=('125') WHERE MapNumber=('5')
+
+
+This one will fix the guild score -99 bug.
+Code:
+
+UPDATE Guild SET G_Score=('0') WHERE G_Score<-1
+
+
+
+This delete all there resets (DONT USE IT LIKE JOB).
+Code:
+
+UPDATE Character SET Resets=('0') WHERE Resets>0
+
+
+
+This one will clear all the vaults.
+Code:
+
+UPDATE warehouse SET Items=('')
+
+
+
+This one for deleting all the items from inventories.
+
+
+
+Code:
+UPDATE Character SET Inventory=('')
+
+
+
+This one will unban all the players.
+Code:
+
+UPDATE Character SET CtlCode=('0') WHERE CtlCode=('1')
+
+
+
+This one will delete all GMs.
+
+Code:
+UPDATE Character SET CtlCode=('0') WHERE CtlCode='32' OR CtlCode='8'
+
+
+
+This one will delete all the level up points.
+Code:
+
+UPDATE Character SET LevelUpPoints=('0') WHERE LevelUpPoints>0
+
+
+
+
+Auto Reset
+Code:
+
+UPDATE Character SET cLevel=('1') , experience=('0') WHERE cLevel>349
+
+
+
+This delete all there resets (DONT USE IT LIKE JOB).
+Code:
+
+UPDATE Character SET Resets=('0') WHERE Resets>0
+
+
+This one will delete all the level up points.
+Code:
+
+UPDATE Character SET LevelUpPoints=('0') WHERE LevelUpPoints>0
+
+
+Give a NO of starting Level up points to characters.
+Edit: 1500 with how much or less do you want.
+Code:
+
+UPDATE Character SET LevelUpPoint=('') + 1500 WHERE cLevel<=1 and Resets<=1
+
+
+
+
+This one will add free credits for ALL players
+Code:
+
+Update MEMB_CREDITS SET credits=credits+100
+
+
+
+This one will drop MuOnline database (better don't use it ^^)
+Code:
+
+DROP dbo.MuOnline
+
+
+
+This one will show you top 100 credited accounts
+Code:
+
+SELECT TOP 100 FROM MEMB_CREDITS WHERE credits>0
+
+
+
+This one will delete all level up points for characters who have max stats
+Code:
+
+update Character set leveluppoint='0' where Strength+Dexterity+Vitality+Energy='131068' OR Strength+Dexterity+Vitality+Energy+Leadership='163835'
